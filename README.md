@@ -1,16 +1,24 @@
-# React + Vite
+# Coverly
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal health-insurance navigator for Irish patients. This repo contains two things built from one Vite project:
 
-Currently, two official plugins are available:
+- **`index.html`** — the public marketing/waitlist landing page.
+- **`app.html`** — the Phase 1 product prototype (policy onboarding, referral-to-specialist matching, booking/case tracking, and the rebate calculator), backed by a `localStorage` mock store standing in for a real backend.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Local development
 
-## React Compiler
+```
+npm install
+npm run dev
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Landing page: `http://localhost:5173/`
+- Product app: `http://localhost:5173/app.html`
 
-## Expanding the ESLint configuration
+## Deployment
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Deployed on Netlify, linked to this repo for continuous deployment — every push to `main` triggers a new build automatically.
+
+- Build command and Node version are pinned in `netlify.toml` (no manual dashboard config needed).
+- `public/_redirects` rewrites `/demo` to `app.html` so the product is reachable at `coverly.ie/demo` with a clean URL.
+- `version1-outdated.html` is a kept-for-reference snapshot of an earlier design pass — not linked from anywhere, not part of the build.
