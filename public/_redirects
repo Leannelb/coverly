@@ -1,0 +1,2 @@
+/demo    /app.html   200
+/demo/*  /app.html   200

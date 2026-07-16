@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #6D4FD1;
+  --color-primary-dark: #5638AE;
+  --color-primary-light: #EFEAFC;
+  --color-secondary: #1A3A4A;
+  --color-accent: #E8A838;
+  --color-bg: #F5F8F8;
+  --color-surface: #FFFFFF;
+  --color-ink: #1C2B2B;
+  --color-ink-soft: #4B5F5F;
+  --color-line: #E1E9E8;
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-body: 'Hanken Grotesk', Inter, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
